@@ -1,0 +1,128 @@
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <!-- We're not supposed to use Bootstrap but it was the fastest thing -->
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0-alpha.6/css/bootstrap.min.css" integrity="sha384-rwoIResjU2yc3z8GV/NPeZWAv56rSmLldC3R/AZzGRnGxQQKnKkoFVhFQhNUwEyJ" crossorigin="anonymous">
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css">
+    <link href="https://fonts.googleapis.com/css?family=Playfair+Display+SC|Sedgwick+Ave+Display" rel="stylesheet">
+    <link rel="stylesheet" href="./assets/style/style.css">
+    <title>bite.</title>
+</head>
+
+
+<body>
+<!-- Landing Page -->
+<div class="container" id="landing-page">
+
+  <nav class="navbar">
+    <div class="css-container">
+      <h1 class="logo"><a href="./index.html">bite.</a></h1>
+      <ul class="nav">
+        <li><a href="./index.html">Home</a></li>
+        <li><a href="./about.html">About</a></li>
+      </ul>
+    </div>
+  </nav>
+
+  <div class="row">
+    <div class="col-md-12 col-sm-12 col-12" id="heading">
+      <h1 id="title"> bite. 
+        <!--https://fontawesome.com/icons/utensils?style=solid  -->
+      <i class="fa fa-cutlery" aria-hidden="true"></i></h1>
+    </div>	
+  </div>		
+    <div class="row">	
+    <div class="col-md-12 col-sm-12 col-12">
+      <input type="text" name="address" id="user-input" placeholder="Enter your location" required >
+      <button class="btn btn-info" id="add-btn" type="submit" value="submit">feed me</button>
+    </div>
+  </div>
+  </div>
+<!-- Curated Results -->
+<div class="container" id="results-page">
+  <div class ="row" id="results-top">
+    <div class="col-md-10 col-sm-10 col-10">
+      <input type="text" name="address" id="page-input" placeholder="Enter location" required >
+      <button class="btn btn-info" id="page-btn" type="submit" value="submit">Keep Looking!</button>
+      <div class="btn-group">
+        <button type="button" class="btn dropdown-toggle" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false" 
+        id="selected-value">
+        10
+        </button>
+        <div class="dropdown-menu" id="number-menu">
+          <a class="dropdown-item" href="#">5</a>
+          <a class="dropdown-item" href="#">10</a>
+          <a class="dropdown-item" href="#">15</a>
+          <!-- Check Distance, Maybe 20 -->
+        </div>
+      </div>
+      <div class="btn-group">
+        <button type="button" class="btn dropdown-toggle" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false" 
+        id="selected-food"> Cuisine </button>
+        <div class="dropdown-menu" id="food-menu">
+          <!-- Italian,Indian,Cafe -->
+          <a id="item" class="dropdown-item" href="#">All</a>
+          <a id="item" class="dropdown-item" href="#">Mexican</a>
+          <a id="item" class="dropdown-item" href="#">Indian</a>
+          <a id="item" class="dropdown-item" href="#">Asian</a>
+          <a id="item" class="dropdown-item" href="#">Italian</a>
+          <a id="item" class="dropdown-item" href="#">Cafe</a>
+        </div>
+      </div>
+      <a class="btn btn-info" id="weather-btn" href="weather.html">Going Out Today? Check The Weather!</a>
+    </div>
+
+<!-- Some type if Local Storage Feature -->
+			<div class="col-md-1 col-sm-1 col-1">	
+				<button type="button"  data-toggle="modal"  data-target="#bookmark-modal" class="btn btn-bookmark">
+				<i class="fa fa-bookmark fa-2x" aria-hidden="true" style='color: red'></i>
+				</button>
+			</div>
+		</div>
+		<div class="row" id="results-bottom">
+            <div class="col col-md-4 col-sm-12 col-12" id="content-results">	
+			</div>
+			<div class="col col-md-7 col-sm-12 col-12" id="content-map">	
+				<div id="map"></div>			
+			</div>
+		</div>
+		</div>
+	</div>
+
+
+<!-- Bookmark for Local Storage -->
+	<div class="modal" id="bookmark-modal" tabindex="-1" role="dialog">
+	  <div class="modal-dialog" role="document">
+	    <div class="modal-content">
+	      <div class="modal-header" id="bookmark-header">
+	        <h4 class="modal-title">Favs</h4>
+	        <button type="button" class="close" data-dismiss="modal" aria-label="Close"></button>
+	          <span aria-hidden="true">&times;</span>
+	        </button>
+	      </div>
+	      <div class="modal-body" id="bookmarks-body">
+	      </div>
+	    </div>
+    </div>
+
+
+
+</body>
+
+<!-- Script files -->
+<script src="https://code.jquery.com/jquery-3.1.1.slim.min.js" integrity="sha384-A7FZj7v+d/sdmMqp/nOQwliLvUsJfDHW+k9Omg/a/EheAdgtzNs3hpfag6Ed950n" crossorigin="anonymous"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/tether/1.4.0/js/tether.min.js" integrity="sha384-DztdAPBWPRXSA/3eYEEUWrWCy7G5KFbe8fFjk5JAIxUYHKkDx6Qin1DkWx51bBrb" crossorigin="anonymous"></script>
+<!-- Change this out ASAP -->
+<script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0-alpha.6/js/bootstrap.min.js" integrity="sha384-vBWWzlZJ8ea9aCX4pEW3rVHjgjt7zpkNpZk+02D9phzyeVkE+jo0ieGizqPLForn" crossorigin="anonymous"></script>
+<script async defer src="https://maps.googleapis.com/maps/api/js?key=AIzaSyAy5nfc8TusPKRVU-vuf6S8XEE9Vk5spMs&callback=initMap"></script>
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
+<script src="./assets/script/google-maps.js"></script>
+<script src="./assets/script/key.js"></script>
+<script src="./assets/script/yelp.js"></script>
+<script src="./assets/script/script.js"></script>
+
+
+</html>
