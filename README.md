@@ -1,7 +1,6 @@
 # bite
 
-first group project project. 
-It was completely up to the groups to create an app (of their choosing) using APIs. We chose to create a food search app called bite.
+Bite is a food search app. 
 
 ![Screen Shot 2021-01-12 at 3 32 00 PM (2)](https://user-images.githubusercontent.com/71223784/104382949-44e7f780-54ec-11eb-8b01-a3ae981135ea.png)
 ![Screen Shot 2021-01-12 at 3 32 15 PM (2)](https://user-images.githubusercontent.com/71223784/104383074-73fe6900-54ec-11eb-8a0b-58e4476cdddb.png)
